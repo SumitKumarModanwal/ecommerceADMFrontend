@@ -1,0 +1,103 @@
+<!-- 
+<div class="bootstrap-wrapper">
+  <div class="container-fluid pdr0 pdl0">
+    <div class="row">
+      <mat-toolbar color="primary">
+        
+        <div class="col">
+          <a routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>home</mat-icon>
+          </a>
+        </div>
+        <div class="col">
+          <span >BookStore</span>
+        </div>
+
+        <div class="col" style="text-align:end ;">
+          
+          <a 
+          *ngIf="!isLoggedIn"
+          routerLink="/login" mat-icon-button class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            Login
+          </a>
+           
+          <a 
+          *ngIf="!isLoggedIn"
+          [routerLink]="'/signup'" mat-icon-button class="example-icon mr10 ml10"
+            aria-label="Example icon-button with share icon ">
+            Register
+          </a>
+          
+          
+          <a 
+          (click) ='logout()'
+          *ngIf="isLoggedIn"
+          [routerLink]="'/signup'" mat-icon-button class="example-icon mr10 ml10"
+            aria-label="Example icon-button with share icon ">
+            Log Out
+          </a>
+          <a
+          *ngIf="isLoggedIn && user"
+          mat-icon-button class="example-icon mr10 ml10"
+            aria-label="Example icon-button with share icon ">
+            {{login.getUser().username}}
+
+          </a>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>
+-->
+
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer">
+      <a mat-icon-button routerLink="/home">Book Store</a>
+    </span>
+    <span class="spacer">
+      <a  mat-icon-button routerLink="/aboutus">About Us</a>
+    </span>
+    <span class="spacer">
+      <a  mat-icon-button routerLink="/contactus">Contact Us</a>
+    </span>
+    <span >
+      <a 
+      *ngIf="!isLoggedIn"
+      routerLink="/login" mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        Login
+      </a>
+    </span>
+    <span >
+      <a 
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/signup'" mat-icon-button class="example-icon mr10 ml10"
+        aria-label="Example icon-button with share icon ">
+        Register
+      </a>
+    </span>
+    <span >
+      <a 
+      (click) ='logout()'
+      *ngIf="isLoggedIn"
+      [routerLink]="'/signup'" mat-icon-button class="example-icon mr10 ml10"
+        aria-label="Example icon-button with share icon ">
+        Log Out
+      </a>
+    </span>
+    <span >
+      <a *ngIf="isLoggedIn && user"
+      mat-icon-button class="example-icon mr10 ml10"
+        aria-label="Example icon-button with share icon ">
+        {{login.getUser().username}}</a>
+    </span>
+    
+
+  </mat-toolbar>
+</p>
+
